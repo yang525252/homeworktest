@@ -8,35 +8,56 @@
       /*function submitForm(event) {
         event.preventDefault();
         window.location.href = 'https://yang525252.github.io/homeworktest/411411209/thankyou.html';
-      }*/  
+      }*/
       function redirectToThankYouPage() {
-          // 直接導向至指定的 URL
-          window.location.href = 'https://yang525252.github.io/homeworktest/411411209/thankyou.html';
+        // 直接導向至指定的 URL
+        window.location.href =
+          'https://yang525252.github.io/homeworktest/411411209/thankyou.html';
       }
-    
     </script>
+    <style>
+      @import url(my.css);
+      a:link {
+        color: green;
+      }
+      a:visited {
+        color: yellow;
+      }
+      a:hover {
+        color: red;
+        font-size: 2em;
+      }
+      a:active {
+        color: black;
+      }
+    </style>
     <title>Document</title>
   </head>
   <body>
-      <!-- <form action="cgi-bin/get.exe" method="get" onsubmit="submitForm(event)"> 這樣就沒有提交資料內容而是直接進入另一個網站，這應該可以運行但由於沒有伺服器可以返回所以就先這樣-->
-     <form id="myForm" onsubmit="event.preventDefault(); redirectToThankYouPage();">
+    <!-- <form action="cgi-bin/get.exe" method="get" onsubmit="submitForm(event)"> 這樣就沒有提交資料內容而是直接進入另一個網站，這應該可以運行但由於沒有伺服器可以返回所以就先這樣-->
+    <form
+      id="myForm"
+      onsubmit="event.preventDefault(); redirectToThankYouPage();"
+    >
       <h1>歡迎進入JobExam市調系統</h1>
       <p>請留個人資料</p>
       <p>姓名:<input type="text" name="user" autofocus /></p>
-      
+
       <p>
         性別:<br />
         <input type="radio" name="sex" value="1" checked />男性<br />
         <input type="radio" name="sex" value="0" />女性<br />
       </p>
-      
+
       <p>請給JobExam系統使用建議</p>
       <p><textarea name="opinion1" cols="30" rows="5"></textarea></p>
       <p>下列文字框使用系統預設大小</p>
       <p><textarea name="opinion2">文字框使用預設大小</textarea></p>
-      
+
       <p>進度條</p>
-      <p>執行進度: <progress id="progressBar" value="0" max="100"></progress></p>
+      <p>
+        執行進度: <progress id="progressBar" value="0" max="100"></progress>
+      </p>
       <p>未指明進度:<progress max="100"></progress></p>
 
       <h2>性別</h2>
@@ -56,6 +77,10 @@
           <option value="mihoyo-starrail">崩鐵部門</option>
         </select>
       </p>
+
+      <button type="button">
+        <a>點擊我</a>
+      </button>
 
       <input type="submit" value="提交所有資料" />
     </form>
